@@ -1,0 +1,36 @@
+@tailwind base;
+
+@layer base {
+    @font-face {
+        font-family: 'Zing Rust';
+        src: url('/public/fonts/zing-rust.woff2') format('woff2'), url('/public/fonts/zing-rust.woff') format('woff');
+    }
+
+    @font-face {
+        font-family: 'Cairo';
+        font-weight: 400;
+        src: url('/public/fonts/Cairo-Regular.woff2') format('woff2'), url('/public/fonts/Cairo-Regular.woff') format('woff');
+    }
+
+    @font-face {
+        font-family: 'Cairo';
+        font-weight: 500;
+        src: url('/public/fonts/Cairo-Medium.woff2') format('woff2'), url('/public/fonts/Cairo-Medium.woff') format('woff');
+    }
+
+    @font-face {
+        font-family: 'Cairo';
+        font-weight: 700;
+        src: url('/public/fonts/Cairo-Bold.woff2') format('woff2'), url('/public/fonts/Cairo-Bold.woff') format('woff');
+    }
+
+    @font-face {
+        font-family: 'Cairo';
+        font-weight: 800;
+        src: url('/public/fonts/Cairo-ExtraBold.woff2') format('woff2'), url('/public/fonts/Cairo-ExtraBold.woff') format('woff');
+    }
+
+}
+
+@tailwind components;
+@tailwind utilities;

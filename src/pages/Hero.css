@@ -1,0 +1,11 @@
+.clip-section {
+    clip-path: polygon(0% 0%, 79% 0, 100% 49%, 78% 100%, 0% 100%);
+}
+
+.clip-footer {
+    clip-path: polygon(0 15%, 100% 0, 100% 50%, 100% 100%, 0% 100%);
+}
+
+.clip-footer-polygon {
+    clip-path: polygon(0% 0%, 68% 0, 100% 54%, 72% 100%, 0% 100%);
+}
