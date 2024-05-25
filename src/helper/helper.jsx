@@ -11,7 +11,7 @@ export const useCheckMobileScreen = () => {
     return () => {
       window.removeEventListener("resize", handleWindowSizeChange);
     };
-  }, []);
+  });
 
   return width < 640;
 };

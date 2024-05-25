@@ -11,9 +11,10 @@ const Hero = ({
   heading_class,
   clip_section_class,
   arrow_pos_class,
+  marginTop = "-mt-[100px]"
 }) => {
   return (
-    <div className="-mt-[100px]">
+    <div className={`${marginTop}`}>
       <div className="h-screen max-h-[765px] relative">
         <motion.img
           variants={{
@@ -46,7 +47,7 @@ const Hero = ({
 
       <div className="">
         <div
-          className={`text-[200px] 2xl:text- [250px] leading-[180px] text-end 2xl:leading-[250px] tracking-wider top-[20%] lg:right-[20%] xl:right-[28%] 2xl:right-[40%] z-40 font-zing -rotate-6 absolute mx-auto w-fit ${heading_class}`}
+          className={`text-[200px] 2xl:text-[250px] leading-[150px] text-end 2xl:leading-[200px] top-[25%] lg:right-[20%] xl:right-[28%] 2xl:right-[35%] z-40 font-zing -rotate-6 absolute -skew-x-[10deg] mx-auto w-fit ${heading_class}`}
         >
           <motion.p
             variants={{

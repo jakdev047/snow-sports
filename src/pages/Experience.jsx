@@ -1,18 +1,15 @@
-import Image1 from "../assets/image.png";
+import Image1 from "../assets/ydrdty.png";
 import Image2 from "../assets/Group_20.png";
 import Footer from "../components/Footer";
 import Image3 from "../assets/Group 17.png";
-import Image4 from "../assets/chev 2.png";
+import Image4 from "../assets/chev 255.png";
 import Hero from "../components/Hero";
 import Reveal from "../components/Reveal";
 import { motion } from "framer-motion";
-import { useCheckMobileScreen } from "../helper/helper";
 
 const Experience = () => {
-  const isMobile = useCheckMobileScreen();
-
-  return isMobile ? (
-    <div className="">
+  const MobileView = (
+    <div className="block sm:hidden">
       <Reveal>
         <div
           className="relative"
@@ -68,7 +65,7 @@ const Experience = () => {
 
       <Reveal>
         <div className="relative">
-          <div className="text-[#236092] font-zing absolute -rotate-6 flex flex-col justify-end items-end right-[50px] top-[20px] text-6xl tracking-wide">
+          <div className="text-[#236092] font-zing absolute -rotate-6 flex flex-col justify-end items-end right-[50px] top-[20px] !transform leading-[60px] text-7xl tracking-tighter">
             <p className="">a nossa</p>
             <p className="text-[#816044]">proposta</p>
           </div>
@@ -82,7 +79,7 @@ const Experience = () => {
 
       <Reveal>
         <div className="relative w-full px-6 text-xl">
-          <p className="font-zing -rotate-6 -skew-x-12 text-[#C11631] text-5xl pt-4">
+          <p className="font-zing !transform -rotate-6 -skew-x-12 text-[#C11631] text-5xl pt-4">
             INSCREVA-SE
           </p>
           <div className="font-bold relative flex flex-col gap-3 text-lg mt-6">
@@ -157,11 +154,13 @@ const Experience = () => {
 
       <Footer />
     </div>
-  ) : (
-    <div>
+  );
+
+  const WebView = (
+    <div className="hidden relative sm:block">
       <div
-        className="bg-white"
-        style={{ clipPath: "polygon(0 0, 100% 0%, 100% 89%, 0% 100%)" }}
+        className="bg-white relative"
+        style={{ clipPath: "polygon(0 0, 100% 0%, 100% 88%, 0% 100%)" }}
       >
         <Hero
           image1={Image1}
@@ -180,7 +179,7 @@ const Experience = () => {
 
       <Reveal>
         <div className="">
-          <div className="relative mx-auto -rotate-3 pt-8 text-2xl w-[700px] -skew-x-12">
+          <div className="relative mx-auto -rotate-[4deg] pt-8 text-2xl w-[700px] -skew-x-[10deg] !transform">
             O Snowsports Portugal – APS disponibilizará um conjunto de programas
             desportivos, actividades e serviços exclusivos para os seus
             associados através de uma estrutura própria ao nível da formação, a
@@ -191,7 +190,7 @@ const Experience = () => {
       </Reveal>
 
       <Reveal>
-        <div className="overflow-hidden pb-32">
+        <div className="overflow-hidden pb-20">
           <div className="relative h-full mt-24">
             <motion.div
               variants={{
@@ -201,10 +200,10 @@ const Experience = () => {
               transition={{ duration: 0.5, delay: 0.1 }}
               initial="hidden"
               animate="visible"
-              className=" font-zing absolute -rotate-3 flex flex-col justify-start items-start right-[350px]  leading-[180px] tracking-wide"
+              className=" font-zing absolute -rotate-6 flex flex-col !transform justify-start items-start right-[220px] text-[230px] leading-[190px]"
             >
               <p className="text-[100px] ml-[80px]">a nossa</p>
-              <p className="text-[#D89B69] text-[200px] -mt-12">proposta</p>
+              <p className="text-[#D89B69] text-[240px] -mt-12">proposta</p>
             </motion.div>
 
             <div className="flex">
@@ -243,7 +242,7 @@ const Experience = () => {
                   animate="visible"
                   src={Image4}
                   alt=""
-                  className="absolute  rotate-3 z-10 left-[100px] -bottom-24"
+                  className="absolute !transform z-10 left-[0px] -bottom-[230px]"
                 />
               </div>
 
@@ -257,12 +256,12 @@ const Experience = () => {
                 animate="visible"
                 className=""
               >
-                <div className="w-[650px] mt-[19rem] relative z-40 -rotate-3 ml-24 text-2xl">
+                <div className="w-[650px] mt-[20rem] relative z-40 -rotate-6 -skew-x-[10deg] !transform ml-12 text-2xl">
                   <div className="">
                     <p className="font-zing text-[#C11631] font-normal text-5xl pt-8">
                       Academy
                     </p>
-                    <div className="font-bold text-2xl mt-2">
+                    <div className="font-bold text-2xl mt-2 ml-4">
                       <div className="flex gap-5 justify-start items-center">
                         <div className="w-2 h-2 bg-black"></div>
                         <div className="">
@@ -292,7 +291,7 @@ const Experience = () => {
                     <p className="font-zing text-[#C11631] font-normal text-5xl">
                       experiências
                     </p>
-                    <div className="font-bold text-2xl mt-2">
+                    <div className="font-bold text-2xl mt-2 ml-6">
                       <div className="flex gap-5 justify-start items-center">
                         <div className="w-2 h-2 bg-black"></div>
                         <div className="">Descoberta de estâncias;</div>
@@ -308,7 +307,7 @@ const Experience = () => {
                     <p className="font-zing text-[#C11631] font-normal text-5xl">
                       serviços
                     </p>
-                    <div className="font-bold text-2xl mt-2">
+                    <div className="font-bold text-2xl mt-2 ml-12">
                       <div className="flex gap-5 justify-start items-center">
                         <div className="w-2 h-2 bg-black"></div>
                         <div className="">Seguros de acidentes desportivos</div>
@@ -326,7 +325,7 @@ const Experience = () => {
                     </div>
                   </div>
 
-                  <div className="mt-6 font-bold text-3xl w-[500px] ml-8 -skew-x-12">
+                  <div className="mt-8 font-bold text-3xl w-[500px] ml-20 !transform -skew-x-[4deg]">
                     Programas em desenvolvimento com lançamento progressivo até
                     finais de 2025.
                   </div>
@@ -337,9 +336,15 @@ const Experience = () => {
         </div>
       </Reveal>
 
-      <div className="pb-12"></div>
       <Footer />
     </div>
+  );
+
+  return (
+    <>
+      {MobileView}
+      {WebView}
+    </>
   );
 };
 

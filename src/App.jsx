@@ -7,23 +7,25 @@ import About from "./pages/About";
 import Home from "./pages/Home";
 
 import { Outlet, Route, Routes } from "react-router-dom";
+import ScrollToTop from "./components/ScrollToTop";
 
-const WithNavbar = () => {
+function WithNavbar() {
   return (
     <>
       <Navbar />
       <Outlet />
     </>
   );
-};
+}
 
-const App = () => {
+function App() {
   return (
-    <div className="antialiased font-cairo 2xl:container mx-auto">
+    <div className="antialiased font-cairo relative 2xl:container mx-auto">
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/" element={<WithNavbar />}>
-          <Route path="home" element={<HomeV2 />} />
+          <Route path="home" element={<HomeV2 marginTop="-mt-[100px]" />} />
           <Route path="experience" element={<Experience />} />
           <Route path="member" element={<Member />} />
           <Route path="about-us" element={<About />} />
@@ -31,6 +33,6 @@ const App = () => {
       </Routes>
     </div>
   );
-};
+}
 
 export default App;

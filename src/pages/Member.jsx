@@ -11,7 +11,7 @@ const Member = () => {
   return (
     <div>
       <div
-        className="bg-white"
+        className="bg-white relative"
         style={{ clipPath: "polygon(0 0, 100% 0%, 100% 95%, 0% 100%)" }}
       >
         <Hero
@@ -29,7 +29,7 @@ const Member = () => {
       </div>
 
       <Reveal>
-        <div className="flex flex-col mx-auto gap-20 w-[500px] mt-20">
+        <div className="flex flex-col mx-auto gap-12 w-[550px] mt-12">
           <div className="flex gap-8">
             <div className="font-zing text-end flex-shrink-0 text-6xl">
               <p className="">ser</p>
@@ -59,7 +59,7 @@ const Member = () => {
       </Reveal>
 
       <Reveal>
-        <div className="my-32">
+        <div className="my-20">
           <Slider />
         </div>
       </Reveal>

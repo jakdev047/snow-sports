@@ -11,7 +11,7 @@ const About = () => {
   return (
     <div>
       <div
-        className="bg-white"
+        className="bg-white relative"
         style={{ clipPath: "polygon(0 0, 100% 0%, 100% 95%, 0% 100%)" }}
       >
         <Hero
@@ -29,7 +29,7 @@ const About = () => {
       </div>
 
       <Reveal>
-        <div className="flex flex-col mx-auto gap-20 w-[500px] mt-20">
+        <div className="flex flex-col mx-auto gap-20 w-[500px] mt-12">
           <div className="flex gap-8">
             <div className="font-zing text-end flex-shrink-0 text-6xl">
               <p className="">quem</p>
@@ -49,7 +49,7 @@ const About = () => {
       </Reveal>
 
       <Reveal>
-        <div className="flex mx-auto gap-6 w-[600px] mt-32">
+        <div className="flex mx-auto gap-6 w-[600px] mt-20">
           <div className="text-end flex-shrink-0 text-lg font-bold">
             <p className="">FUNDAÇÃO</p>
             <p className="">E MISSÃO</p>
@@ -67,13 +67,13 @@ const About = () => {
       </Reveal>
 
       <Reveal>
-        <div className="my-32">
+        <div className="my-20">
           <Slider />
         </div>
       </Reveal>
 
       <Reveal>
-        <div className="flex mx-auto gap-6 w-[600px] mt-32">
+        <div className="flex mx-auto gap-6 w-[600px] mt-20">
           <div className="text-lg flex-shrink-0 font-bold text-end">
             <p className="">OBJECTIVOS</p>
             <p className="">PRINCIPAIS</p>
@@ -127,7 +127,7 @@ const About = () => {
       </Reveal>
 
       <Reveal>
-        <div className="flex gap-8 mt-32">
+        <div className="flex gap-8 mt-20">
           <div className="flex-1">
             <img src={Image3} alt="" />
           </div>
@@ -155,7 +155,7 @@ const About = () => {
       </Reveal>
 
       <Reveal>
-        <div className="flex mx-auto gap-8 w-[950px] mt-32">
+        <div className="flex mx-auto gap-8 w-[950px] mt-20">
           <div className="text-lg flex-shrink-0 font-bold text-end">
             <p className="">VALORES</p>
             <p className="">E PRINCÍPIOS</p>
@@ -232,7 +232,7 @@ const About = () => {
       </Reveal>
 
       <Reveal>
-        <div className="flex mx-auto gap-8 w-[900px] mt-32">
+        <div className="flex mx-auto gap-8 w-[900px] mt-20">
           <div className="text-lg flex-shrink-0 font-bold text-end">
             <p className="">PARA</p>
             <p className="">QUEM</p>
@@ -277,13 +277,13 @@ const About = () => {
       </Reveal>
 
       <Reveal>
-        <div className="my-32">
+        <div className="my-20">
           <img src={Image4} alt="" className="w-full" />
         </div>
       </Reveal>
 
       <Reveal>
-        <div className="flex mx-auto gap-8 w-[900px] my-32">
+        <div className="flex mx-auto gap-8 w-[900px] my-20">
           <div className="text-lg flex-shrink-0 font-bold text-end">
             <p className="">ÁREAS</p>
             <p className="">DE FOCO</p>

@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import Image1 from "../assets/herov2.png";
 import Image2 from "../assets/Group_20.png";
 import Image3 from "../assets/image slices.png";
@@ -8,13 +9,10 @@ import Hero from "../components/Hero";
 import Footer from "../components/Footer";
 import Reveal from "../components/Reveal";
 import { motion } from "framer-motion";
-import { useCheckMobileScreen } from "../helper/helper";
 
-const HomeV2 = () => {
-  const isMobile = useCheckMobileScreen();
-
-  return isMobile ? (
-    <div className="">
+const HomeV2 = ({ marginTop = "" }) => {
+  const MobileView = (
+    <div className="block sm:hidden">
       <Reveal>
         <div
           className="relative"
@@ -67,17 +65,17 @@ const HomeV2 = () => {
       </Reveal>
 
       <Reveal>
-        <div className="relative">
-          <div className="text-[#236092] font-zing absolute -rotate-6 flex flex-col justify-end items-end right-[50px] -top-[30px] text-6xl  tracking-wide">
-            <p className="">torne-se</p>
-            <p className="text-[#816044]">sócio</p>
-          </div>
-          <img
-            src={Image3}
-            alt=""
-            className="relative -rotate-3 -left-20 mt-20 h-[190px] z-40"
-          />
+      <div className="relative">
+        <div className="text-[#236092] font-zing absolute -rotate-6 !transform flex flex-col justify-end items-end test right-[50px] -top-[20px] text-7xl leading-[60px] tracking-tighter">
+          <p className="">torne-se</p>
+          <p className="text-[#816044]">sócio</p>
         </div>
+        <img
+          src={Image3}
+          alt=""
+          className="relative !transform -left-20 mt-20 h-[190px] z-40"
+        />
+      </div>
       </Reveal>
 
       <Reveal>
@@ -140,11 +138,13 @@ const HomeV2 = () => {
 
       <Footer />
     </div>
-  ) : (
-    <div>
+  );
+
+  const WebView = (
+    <div className="hidden relative sm:block">
       <div
-        className="bg-white"
-        style={{ clipPath: "polygon(0 0, 100% 0%, 100% 89%, 0% 100%)" }}
+        className="bg-white relative"
+        style={{ clipPath: "polygon(0% 0%, 100% 0%, 100% 88%, 0% 100%)" }}
       >
         <Hero
           image1={Image1}
@@ -154,12 +154,13 @@ const HomeV2 = () => {
           heading1_color={"text-[#236092]"}
           heading2_color={"text-[#816044]"}
           heading_class={"!text-start !right-[250px]"}
+          marginTop={marginTop}
         />
       </div>
 
       <Reveal>
         <div className="">
-          <div className="relative mx-auto -rotate-3 pt-8 text-2xl w-[700px] -skew-x-12">
+          <div className="relative mx-auto !transform -rotate-[4deg] -skew-x-[10deg] pt-4 text-2xl w-[700px]">
             Divulgar e incentivar a participação nos desportos de neve,
             facilitando o acesso a todas as suas vertentes, desenvolvendo
             simultaneamente actividades agregadoras dos seus entusiastas.
@@ -179,7 +180,7 @@ const HomeV2 = () => {
               transition={{ duration: 0.5, delay: 0.1 }}
               initial="hidden"
               animate="visible"
-              className="text-[#236092] font-zing absolute -rotate-3 flex flex-col justify-end items-end right-[400px] text-[200px]  leading-[180px] tracking-wide"
+              className="text-[#236092] font-zing absolute !transform -rotate-6 flex flex-col justify-end items-end right-[500px] -mt-8 text-[230px] leading-[170px]"
             >
               <p className="">torne-se</p>
               <p className="">sócio</p>
@@ -209,7 +210,7 @@ const HomeV2 = () => {
                   animate="visible"
                   src={Image3}
                   alt=""
-                  className="relative rotate-2 -left-2 mt-48 h-[590px] z-40"
+                  className="relative -rotate-2 !transform -left-2 mt-48 h-[590px] z-40"
                 />
                 <motion.img
                   variants={{
@@ -234,15 +235,15 @@ const HomeV2 = () => {
                 animate="visible"
                 className=""
               >
-                <div className="w-[450px] mt-[22rem] -rotate-3 -ml-8 text-2xl">
+                <div className="w-[450px] mt-[19rem] -rotate-6 -skew-x-[10deg] !transform -ml-8 text-3xl leading-7">
                   Junte-se à APS - Snowsports Portugal e aceda a uma variedade
                   de programas, eventos, vantagens e descontos exclusivos para
                   os entusiastas do Ski & Snowboard.
                 </div>
-                <div className="font-semibold w-[400px] -rotate-3 pt-8 ml-8 text-2xl">
+                <div className="font-semibold w-[400px] -rotate-6 -skew-x-[10deg] !transform pt-6 ml-8 text-3xl leading-7">
                   Junte-se ao clube e faça parte desta comunidade vibrante de
                   apaixonados pela neve!
-                  <p className="font-zing text-[#C11631] font-normal text-6xl pt-8">
+                  <p className="font-zing text-[#C11631] font-normal text-6xl pt-6">
                     INSCREVA-SE
                   </p>
                 </div>
@@ -253,7 +254,7 @@ const HomeV2 = () => {
       </Reveal>
 
       <Reveal>
-        <div className="mt-[6rem] -mb-[6rem]">
+        <div className="mt-[1rem] -mb-[8rem]">
           <div className="relative">
             <motion.div
               variants={{
@@ -263,12 +264,12 @@ const HomeV2 = () => {
               transition={{ duration: 0.5, delay: 0.1 }}
               initial="hidden"
               animate="visible"
-              className="absolute text-[#236092] font-zing -rotate-3 text-[190px] flex gap-12 leading-[180px] tracking-wide"
+              className="absolute text-[#236092] font-zing -rotate-6 -skew-x-[10deg] !transform text-[190px] flex gap-12 leading-[180px]"
             >
               <p className="">SNOWSPORTS</p>
-              <p className="text-[#D9D9D9]">SNOW</p>
+              <p className="text-[#D9D9D9]">SNOWS</p>
             </motion.div>
-            <div className="relative flex z-40 overflow-hidden">
+            <div className="relative flex overflow-hidden">
               <div className="flex-1 flex-shrink-0 mt-[250px] -rotate-[5deg] -skew-x-[10deg] -ml-12">
                 <img src={Image6} alt="" className="h-full object-contain" />
               </div>
@@ -281,15 +282,15 @@ const HomeV2 = () => {
                 transition={{ duration: 0.5, delay: 0.1 }}
                 initial="hidden"
                 animate="visible"
-                className="mt-[200px] flex-1 -rotate-3"
+                className="mt-[170px] flex-1 -rotate-3"
               >
-                <div className="font-zing text-8xl ml-[100px] -rotate-3 -skew-x-[13deg]">
+                <div className="font-zing text-8xl ml-[100px] -rotate-6 -skew-x-[12deg] !transform">
                   <p className="">academy</p>
                   <p className="">experiências</p>
                   <p className="">serviços</p>
                 </div>
 
-                <div className="mt-8 text-[20px] font-medium w-[500px] ml-[70px] -rotate-3 -skew-x-12">
+                <div className="mt-8 text-[28px] font-medium w-[550px] ml-[80px] -rotate-6 -skew-x-[12deg] leading-7 !transform">
                   Propomos um conjunto de programas, parcerias e benefícios para
                   os associados, como programas de treino e competição para
                   jovens, clínicas de aperfeiçoamento técnico e programas de
@@ -300,7 +301,7 @@ const HomeV2 = () => {
                 </div>
 
                 <div className="">
-                  <p className="font-zing text-[#C11631] ml-[50px] -rotate-3  font-normal text-6xl pt-8">
+                  <p className="font-zing text-[#C11631] ml-[60px] -rotate-6 -skew-x-[12deg] !transform font-normal text-6xl pt-8">
                     inscreva-se +
                   </p>
                 </div>
@@ -312,6 +313,13 @@ const HomeV2 = () => {
 
       <Footer />
     </div>
+  );
+
+  return (
+    <>
+      {MobileView}
+      {WebView}
+    </>
   );
 };
 

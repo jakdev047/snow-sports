@@ -12,7 +12,9 @@ const Navbar = () => {
     <>
       <div className="p-4 z-50 sticky top-0 flex justify-between items-center backdrop-blur-sm">
         <div className="">
-          <img src={LogoSm} alt="" />
+          <Link to={"/home"}>
+            <img src={LogoSm} alt="" className="cursor-pointer" />
+          </Link>
         </div>
         <div
           className="font-zing text-4xl flex text-[#236092] skew-x-6"
@@ -31,8 +33,11 @@ const Navbar = () => {
       )}
     </>
   ) : (
-    <div className="p-4 z-50 sticky top-0 flex justify-between items-center backdrop-blur-sm">
-      <img src={LogoSm} alt="" className="w-12 h-14 p-2" />
+    <div className="p-4 z-[80] sticky top-0 flex justify-between items-center backdrop-blur-sm">
+      <Link to={"/"}>
+            <img src={LogoSm} alt="" className="cursor-pointer w-12 h-14 p-2" />
+          </Link>
+      {/* <img src={LogoSm} alt="" className="" /> */}
       <div className="flex gap-6 font-zing text-2xl text-[#236092]">
         <Link to={"/home"}>
           <p className="cursor-pointer hover:scale-105 transition duration-300">
